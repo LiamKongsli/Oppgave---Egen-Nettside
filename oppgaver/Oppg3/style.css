@@ -1,0 +1,34 @@
+p {
+
+color: deeppink;    
+
+}
+
+#tekst {
+
+color: aqua;
+
+}
+
+#prosjekter {
+
+color: blueviolet;
+
+}
+
+h2 {
+
+color: cyan;
+
+}
+
+.uthevet {
+
+color: darkviolet;
+background-color: hotpink;
+
+}
+
+#copyright {
+    color: darkturquoise;
+}
