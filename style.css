@@ -62,3 +62,10 @@ footer {
   border-radius: 6px;
   margin-bottom: 0.5rem;
 }
+.kort {
+  transition: transform 0.2s;
+}
+
+.kort:hover {
+  transform: translateY(-4px);
+}
