@@ -1,3 +1,23 @@
+:root {
+  --bg: #f7f7f9;
+  --tekst: #222;
+  --nav-bg: #2b2d42;
+  --kort-bg: #fff;
+  --dempet: #666;
+  --lenke: #0645ad;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14151f;
+    --tekst: #e8e8ee;
+    --nav-bg: #0d0e15;
+    --kort-bg: #1f2130;
+    --dempet: #a0a0b0;
+    --lenke: #8ab4ff;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,15 +27,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: #222;
-  background: #f7f7f9;
+  color: var(--tekst);
+  background: var(--bg);
 }
 
 nav {
   display: flex;
   gap: 1.5rem;
   padding: 1rem 2rem;
-  background: #2b2d42;
+  background: var(--nav-bg);
 }
 
 nav a {
@@ -33,6 +53,10 @@ main {
   padding: 2rem;
 }
 
+main a {
+  color: var(--lenke);
+}
+
 section {
   margin-bottom: 2rem;
 }
@@ -40,8 +64,9 @@ section {
 footer {
   text-align: center;
   padding: 1rem;
-  color: #666;
+  color: var(--dempet);
 }
+
 .kort-rad {
   display: flex;
   flex-wrap: wrap;
@@ -50,22 +75,21 @@ footer {
 
 .kort {
   flex: 1 1 250px;
-  background: #fff;
+  background: var(--kort-bg);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
+
+.kort:hover {
+  transform: translateY(-4px);
+}
+
 .kort img,
 .kort video {
   width: 100%;
   height: auto;
   border-radius: 6px;
   margin-bottom: 0.5rem;
-}
-.kort {
-  transition: transform 0.2s;
-}
-
-.kort:hover {
-  transform: translateY(-4px);
 }
