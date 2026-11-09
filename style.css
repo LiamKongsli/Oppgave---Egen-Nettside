@@ -1,4 +1,6 @@
 :root {
+   --knapp-bg: #2b2d42;
+  --knapp-tekst: #fff;
   --bg: #f7f7f9;
   --tekst: #222;
   --nav-bg: #2b2d42;
@@ -9,6 +11,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --knapp-bg: #8ab4ff;
+    --knapp-tekst: #14151f;
     --bg: #14151f;
     --tekst: #e8e8ee;
     --nav-bg: #0d0e15;
@@ -92,4 +96,30 @@ footer {
   height: auto;
   border-radius: 6px;
   margin-bottom: 0.5rem;
+}
+.kort p {
+  margin-bottom: 0.75rem;
+}
+
+.knapp {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--knapp-bg);
+  color: var(--knapp-tekst);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: opacity 0.2s;
+}
+
+.knapp:hover {
+  opacity: 0.85;
+}
+.sol {
+  display: inline-block;
+  animation: puls 2s ease-in-out infinite;
+}
+
+@keyframes puls {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.15); }
 }
