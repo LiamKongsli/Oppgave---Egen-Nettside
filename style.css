@@ -1,5 +1,5 @@
 :root {
-   --knapp-bg: #2b2d42;
+  --knapp-bg: #2b2d42;
   --knapp-tekst: #fff;
   --bg: #f7f7f9;
   --tekst: #222;
@@ -20,6 +20,8 @@
     --dempet: #a0a0b0;
     --lenke: #8ab4ff;
   }
+
+  /* Her brukte jeg Ai for å finne ut hvordan jeg skulle få til den mørke fargen, etter å ha prøvd på det selv. */
 }
 
 * {
@@ -37,6 +39,7 @@ body {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   padding: 1rem 2rem;
   background: var(--nav-bg);
@@ -97,10 +100,12 @@ footer {
   border-radius: 6px;
   margin-bottom: 0.5rem;
 }
+
 .kort p {
   margin-bottom: 0.75rem;
 }
 
+/* Hjelp av w3schools og Ai. */
 .knapp {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -114,12 +119,35 @@ footer {
 .knapp:hover {
   opacity: 0.85;
 }
+
 .sol {
   display: inline-block;
   animation: puls 2s ease-in-out infinite;
 }
 
 @keyframes puls {
-  0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.15); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* Hjelp av W3Schools og Ai */
+
+
+/* Tilpasning for mobil */
+@media (max-width: 600px) {
+  nav {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
 }
