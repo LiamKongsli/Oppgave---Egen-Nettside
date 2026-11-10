@@ -139,6 +139,15 @@ footer {
 
 /* Hjelp av W3Schools og Ai */
 
+#it-oppgaver .kort {
+  display: flex;
+  flex-direction: column;
+}
+
+#it-oppgaver .knapp {
+  margin-top: auto;
+  align-self: flex-start;
+}
 
 /* Tilpasning for mobil */
 @media (max-width: 600px) {
@@ -151,6 +160,7 @@ footer {
     padding: 1rem;
   }
 }
+
 .kort iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
